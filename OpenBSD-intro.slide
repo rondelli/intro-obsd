@@ -5,7 +5,6 @@ Hernán Rondelli
 Universidad Nacional de General Sarmiento
 lucifer.unix.cabj@gmail.com
 
-
 * bit.ly/ungs-obsd-intro
 
 .image img/ungs-obsd-intro.png
@@ -194,6 +193,6 @@ strlcpy, pledge, mandoc, mg, cwm, doas, vmm…
 .link https://man.openbsd.org
 
 # empty title
-*
+* 
 
 .image img/questions.png
