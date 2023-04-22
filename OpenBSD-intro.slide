@@ -1,0 +1,194 @@
+OpenBSD
+A Simple Introduction
+
+Hernán Rondelli
+Universidad Nacional de General Sarmiento
+lucifer.unix.cabj@gmail.com
+
+# empty title
+#* 
+
+#.image img/logo.svg
+
+* What is OpenBSD?
+
+- Unix-like operating system
+- Free and open source software
+- Unix philosophy
+- BSD (Berkeley Software Distribution)
+- Focus on security and code correctness
+
+* OpenBSD vs FreeBSD
+
+# empty title
+* 
+
+.image img/puffy.png _ 300
+.caption *OpenBSD*
+
+.image img/freebsd-logo.png _ 225
+.caption *FreeBSD*
+
+# empty title
+* 
+
+*OpenBSD*
+
+- Simple, small
+- Own way
+- BSDL, ISC
+- High security
+
+*FreeBSD*
+
+- Complex, large
+- Others' code—e.g. ZFS
+- BSDL, GPL, LGPL, etc
+- Medium security
+
+* OpenBSD vs Linux
+
+# empty title
+* 
+
+.image img/puffy.png _ 300
+.caption *OpenBSD*
+
+.image img/tux.jpg _ 200
+.caption *Linux*
+
+# empty title
+* 
+
+*OpenBSD*
+
+- Simply, tiny. BSD userland
+- Less hardware, no vendor support. Slow
+- BSDL, ISC
+- Ultra secured
+
+*Linux*
+
+- Complex, huge. GNU userland
+- More hardware, vendor support. Fast
+- GPL, LGPL
+- Medium security
+
+* man yes
+
+.image img/yes-man.png _ 985
+
+* GNU yes.c
+
+.image img/yes-gnu.png _ 950
+
+* FreeBSD yes.c
+
+.image img/yes-freebsd.png _ 950
+
+* NetBSD yes.c
+
+.image img/yes-netbsd.png _ 950
+
+* OpenBSD yes.c
+
+.image img/yes-openbsd.png _ 950
+
+* OpenBSD yes.c
+
+	#include <err.h>
+	#include <stdio.h>
+	#include <unistd.h>
+
+	int
+	main(int argc, char *argv[])
+	{
+		if (pledge("stdio", NULL) == -1)
+			err(1, "pledge");
+
+		if (argc > 1)
+			for (;;)
+				puts(argv[1]);
+		else
+			for (;;)
+				puts("y");
+	}
+
+
+* src
+
+- GNU
+.link https://github.com/coreutils/coreutils/blob/master/src/yes.c
+
+- FreeBSD
+.link https://github.com/freebsd/freebsd-src/blob/master/usr.bin/yes/yes.c
+
+- NetBSD
+.link https://github.com/NetBSD/src/blob/trunk/usr.bin/yes/yes.c
+- OpenBSD
+.link https://github.com/openbsd/src/blob/master/usr.bin/yes/yes.c
+
+* OpenBSD use cases
+
+- Firewall®
+- Router
+- [Critical] server
+- Development, desktop, laptop workstation
+
+* pf (Packet Filter)
+
+- Powerful
+- Easy to use
+- FreeBSD, macOS, iOS, iPadOS, Solaris
+
+# empty title
+* 
+
+*tmux*(Terminal*MUltipleXer)*
+
+- Like `screen` but better
+- FreeBSD, macOS, Linux, Solaris, etc
+
+*OpenSSH*
+
+- ssh (Secure SHell)
+- Everywhere
+
+* More OpenBSD projects
+
+pf, OpenSSH, tmux,
+carp, ospfd, OpenBGPD, OpenNTPD, OpenSMTPD,
+LibreSSL, httpd, rebound,
+strlcpy, pledge, mandoc, mg, cwm, doas, vmm…
+
+* Do you need help?
+
+ $ man afterboot
+ $ man ls
+ $ man …
+
+* Should I use OpenBSD?
+
+* "We don't care what you do with our code"
+
+* Summary
+
+- Simple, small, secure Unix
+- Free and open source
+- Server, desktop, laptop
+
+* More info
+
+- OpenBSD
+.link https://www.openbsd.org
+
+- OpenBSD FAQ
+.link https://www.openbsd.org/faq/index.html
+
+- OpenBSD man pages
+.link https://man.openbsd.org
+
+# empty title
+*
+
+.image img/questions.png
